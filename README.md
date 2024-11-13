@@ -16,3 +16,5 @@ numbers, underscores, or hyphens.
 - `Index ordering` is not supported on `MySQL`. If you use
 MySQL for the database, a descending index will be created
 as a normal index
+
+- We use `related_name` to specify the name of the reverse relationship, from `User` to `Post`. This will allow us to access related objects easily from a user object by using the `user.blog_posts` notation.
