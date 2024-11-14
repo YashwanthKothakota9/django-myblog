@@ -27,3 +27,5 @@ Django creates an auto-incremental id column that is used as the primary
 key for each model, but you can also override this by specifying `primary_key=True` on one of your model fields. The default `id` column
 consists of an integer that is incremented automatically. This column
 corresponds to the `id` field that is automatically added to your model.
+
+- `facet counts` indicate the number of objects corresponding to each specific filter.
