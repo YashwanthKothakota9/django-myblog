@@ -127,3 +127,6 @@ QuerySets are only evaluated in the following cases:
 of a string pattern, a view, and, optionally, a name that allows you to name the URL project-wide.
 
 - `slug` (a string that can only contain letters, numbers, underscores, or hyphens).
+- `Canonical URLs` allow you to specify the URL for the master copy of a
+page. Django allows you to implement the `get_absolute_url()` method in
+your models to return the canonical URL for the object.
