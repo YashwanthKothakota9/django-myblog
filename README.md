@@ -121,3 +121,9 @@ QuerySets are only evaluated in the following cases:
 - When you call repr() or len() on them
 - When you explicitly call list() on them
 - When you test them in a statement, such as bool(), or, and, or if
+  
+
+- URL patterns allow you to map URLs to views. A URL pattern is composed
+of a string pattern, a view, and, optionally, a name that allows you to name the URL project-wide.
+
+- `slug` (a string that can only contain letters, numbers, underscores, or hyphens).
