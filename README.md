@@ -130,3 +130,13 @@ of a string pattern, a view, and, optionally, a name that allows you to name the
 - `Canonical URLs` allow you to specify the URL for the master copy of a
 page. Django allows you to implement the `get_absolute_url()` method in
 your models to return the canonical URL for the object.
+- Class-based views are an alternative way to implement views as Python
+objects instead of functions. Since a view is a function that takes a web
+request and returns a web response, you can also define your views as class methods. Django provides base view classes that you can use to implement your own views. All of them inherit from the `View` class, which handles HTTP method dispatching and other common functionalities.
+
+
+`Class-based views` offer some advantages over function-based views that are useful for specific use cases. Class-based views allow you to:
+- Organize code related to HTTP methods, such as GET, POST, or PUT, in
+separate methods, instead of using conditional branching.
+- Use multiple inheritance to create reusable view classes (also known as
+`mixins`).
