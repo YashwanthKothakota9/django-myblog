@@ -155,3 +155,8 @@ fields. The form can be used to create or edit model instances.
 `EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'`
 
 - By default, Django checks for the `CSRF token` in all POST requests. Remember to include the `csrf_token` tag in all forms that are submitted via `POST`.
+
+- The `save()` method is available for `ModelForm` but not for `Form` instances since they are not linked to any model.
+
+- The `{% with %}` template tag is useful for avoiding hitting
+the database or accessing expensive methods multiple times.
