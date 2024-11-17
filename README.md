@@ -140,3 +140,18 @@ request and returns a web response, you can also define your views as class meth
 separate methods, instead of using conditional branching.
 - Use multiple inheritance to create reusable view classes (also known as
 `mixins`).
+
+Django comes with two base classes to build forms:
+- `Form`: This allows you to build standard forms by defining fields and
+validations.
+- `ModelForm`: This allows you to build forms tied to model instances. It
+provides all the functionalities of the base Form class, but form fields
+can be explicitly declared, or automatically generated, from model
+fields. The form can be used to create or edit model instances.
+
+- The `django-anymail` application simplifies the task of adding email service providers to your project like `SendGrid` or `Amazon SES`.
+
+- To write emails to console
+`EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'`
+
+- By default, Django checks for the `CSRF token` in all POST requests. Remember to include the `csrf_token` tag in all forms that are submitted via `POST`.
