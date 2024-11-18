@@ -168,3 +168,13 @@ the database or accessing expensive methods multiple times.
 - Template tags allow you to process any data and add it to any template
 regardless of the view executed. You can perform QuerySets or process any
 data to display results in your templates.
+- A filter is written like `{{ variable|my_filter }}`
+- Filters with an argument are written like 
+`{{ variable|my_filter:"foo" }}`
+- `{{ variable|filter1|filter2 }}`
+
+- In Django, HTML content is escaped by default for security.
+Use `mark_safe` cautiously, only on content you control.
+Avoid using `mark_safe` on any content submitted by non-staff users to prevent security vulnerabilities.
+
+- `Storing text in Markdown format in the database, rather than HTML, is a wise security strategy. Markdown limits the potential for injecting malicious content. This approach ensures that any text formatting is safely converted to HTML only at the point of rendering the template`.
