@@ -185,3 +185,16 @@ Avoid using `mark_safe` on any content submitted by non-staff users to prevent s
 - Django has a built-in `syndication feed framework` that you can use to
 dynamically generate `RSS or Atom feeds` in a similar manner to creating
 sitemaps using the site’s framework.
+
+- Although Django is a database-agnostic web framework, it provides a module that supports part of the rich feature set offered by PostgreSQL, which is not offered by other databases that Django supports.
+- You also need to install the `psycopg` PostgreSQL adapter for Python.
+- We will export the data, switch the project’s database to PostgreSQL, and import the data into the new database. Django comes with a simple way to load and dump data from the database into files that are called `fixtures`. Django supports fixtures in JSON, XML,or YAML format. We are going to create a fixture with all data contained in
+the database.
+- The `dumpdata` command dumps data from the database into the standard
+output, serialized in JSON format by default. The resulting data structure includes information about the model and its fields for Django to be able to load it into the database.
+
+- Full-text search is an intensive process. If you are searching
+for more than a few hundred rows, you should define a
+functional index that matches the search vector you are
+using. Django provides a SearchVectorField field for your
+models
