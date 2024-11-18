@@ -178,3 +178,5 @@ Use `mark_safe` cautiously, only on content you control.
 Avoid using `mark_safe` on any content submitted by non-staff users to prevent security vulnerabilities.
 
 - `Storing text in Markdown format in the database, rather than HTML, is a wise security strategy. Markdown limits the potential for injecting malicious content. This approach ensures that any text formatting is safely converted to HTML only at the point of rendering the template`.
+
+- A `sitemap` is an `XML file` that tells search engines the pages of your website, their relevance, and how frequently they are updated. Using a sitemap will make your site more visible in search engine rankings because it helps crawlers to index your website’s content.
