@@ -161,4 +161,10 @@ fields. The form can be used to create or edit model instances.
 - The `{% with %}` template tag is useful for avoiding hitting
 the database or accessing expensive methods multiple times.
 - It’s good practice to keep the Django packages at the top, third-party packages in the middle, and local applications at the end of `INSTALLED_APPS`.
-- 
+- Django provides the following helper functions, which allow you to easily create template tags:
+`simple_tag`: Processes the given data and returns a string
+`inclusion_tag`: Processes the given data and returns a rendered template
+
+- Template tags allow you to process any data and add it to any template
+regardless of the view executed. You can perform QuerySets or process any
+data to display results in your templates.
