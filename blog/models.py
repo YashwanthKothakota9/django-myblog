@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.conf import settings
 from django.urls import reverse
+from taggit.managers import TaggableManager
 
 
 class PublishedManager(models.Manager):
@@ -35,6 +36,7 @@ class Post(models.Model):
     )
     objects = models.Manager()  # default manager
     published = PublishedManager()  # custom manager
+    tags = TaggableManager()
 
     class Meta:
         ordering = ['-publish']

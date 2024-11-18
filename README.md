@@ -160,3 +160,5 @@ fields. The form can be used to create or edit model instances.
 
 - The `{% with %}` template tag is useful for avoiding hitting
 the database or accessing expensive methods multiple times.
+- It’s good practice to keep the Django packages at the top, third-party packages in the middle, and local applications at the end of `INSTALLED_APPS`.
+- 
